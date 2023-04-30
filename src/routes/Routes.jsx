@@ -17,7 +17,9 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Navigate to="/catagory/0"></Navigate>,
+        element: (
+          <Navigate to="https://dragon-news-server-ten-sepia.vercel.app/catagories/0"></Navigate>
+        ),
       },
       {
         path: "/login",
@@ -46,7 +48,9 @@ const router = createBrowserRouter([
         path: ":id",
         element: <Catagory></Catagory>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/catagories/${params.id}`),
+          fetch(
+            `https://dragon-news-server-ten-sepia.vercel.app/catagories/${params.id}`
+          ),
       },
     ],
   },
@@ -62,7 +66,9 @@ const router = createBrowserRouter([
           </PrivetRoutes>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/news/${params.id}`),
+          fetch(
+            `https://dragon-news-server-ten-sepia.vercel.app/news/${params.id}`
+          ),
       },
     ],
   },
